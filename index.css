@@ -1,5 +1,11 @@
+h1 {
+    color: pink;
+    text-decoration: italic;
+}
+
 body {
     background-color: #9CB071;
+    font-family: Georgia, Times, 'Times New Roman', serif;
 }
 /*color is called iguana green*/
 
@@ -9,4 +15,8 @@ header {
 
 html {
     margin: 0 15%;
+}
+
+body {
+    margin: 0;
 }
