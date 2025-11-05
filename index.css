@@ -2,3 +2,11 @@ body {
     background-color: #9CB071;
 }
 /*color is called iguana green*/
+
+header {
+    text-align: center;
+}
+
+html {
+    margin: 0 15%;
+}
