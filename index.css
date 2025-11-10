@@ -1,12 +1,19 @@
 h1 {
-    color: pink;
+    color: rgb(138, 58, 71);
+    font-size: 45px;
+    font-weight: bold;
+    text-shadow:
+        2px 2px 0 #fff,
+        4px 4px 0 #81b6ed,
+        6px 6px 0 #4447a2;
 }
 
+
 body {
-    background-color: #9CB071;
+    background-color: #98a8c5;
     font-family: Georgia, Times, 'Times New Roman', serif;
 }
-/*color is called iguana green*/
+/*color is called iguana green or was [#9CB07]*/
 
 header {
     text-align: center;
@@ -63,4 +70,10 @@ nav a:hover {
 
 body {
     margin: 0;
+    
+}
+
+p {
+    background-color: bisque;
+
 }
