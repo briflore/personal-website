@@ -1,6 +1,5 @@
 h1 {
     color: pink;
-    text-decoration: italic;
 }
 
 body {
@@ -16,6 +15,51 @@ header {
 html {
     margin: 0 15%;
 }
+
+nav {
+    background-color: bisque;
+    font-style: italic;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center; /* centers the menu items */
+}
+
+/* Each menu item */
+nav li {
+  margin: 0 20px;
+}
+
+/* Style the links */
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+/* Hover effect */
+nav a:hover {
+  color: #ff9800;
+}
+
+@media (max-width: 600px) { /* the @media is used to modify to different screen sizes, essentially creating a responsiveness to the device*/
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav li {
+    margin: 10px 0;
+  }
+}
+
 
 body {
     margin: 0;
