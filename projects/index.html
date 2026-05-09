@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Briana Flores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <style>
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .project-card {
+            background: white;
+            padding: 40px;
+            border: 1px solid rgba(0,0,0,0.05);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 40px rgba(138, 58, 71, 0.1);
+        }
+
+        .project-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .project-meta {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--secondary);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .project-link {
+            margin-top: 30px;
+            color: var(--text-main);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 2px;
+            transition: var(--transition);
+        }
+
+        .project-link:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        @media (max-width: 600px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <ul class="menu bar">
+            <li><a href="../">Home</a></li>
+            <li><a href="./">Projects</a></li>
+            <li><a href="../extracurriculars/">Extracurriculars</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container reveal">
+    <header>
+        <span class="project-meta">Selected Works</span>
+        <h1 class="reveal">Projects</h1>
+        <p class="hero-tagline">A collection of technical explorations and creative solutions.</p>
+    </header>
+
+    <div class="projects-grid">
+        <div class="project-card reveal">
+            <div>
+                <span class="project-meta">Mobile Development | iOS</span>
+                <h3 class="project-title">Color Guesser</h3>
+                <p>An intuitive iOS game application that challenges users' color perception. Built with a focus on seamless user experience and minimalist aesthetic.</p>
+            </div>
+            <a href="colorguesser/" class="project-link">Explore Project</a>
+        </div>
+
+        <div class="project-card reveal" style="animation-delay: 0.2s;">
+            <div>
+                <span class="project-meta">Computer Vision | Python</span>
+                <h3 class="project-title">Image Segmentation & Clustering</h3>
+                <p>A sophisticated toolkit developed during my AI specialization. It utilizes advanced clustering algorithms to segment images into meaningful components, showcasing the power of computational vision.</p>
+            </div>
+            <a href="#" class="project-link">View Documentation</a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Briana Flores. Designed with intent.</p>
+    </div>
+</footer>
+
+</body>
+</html>

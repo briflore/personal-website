@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Code | Briana Flores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../index.css">
+    <style>
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 80px;
+            margin-top: 80px;
+            align-items: start;
+        }
+
+        .side-text {
+            position: sticky;
+            top: 140px;
+        }
+
+        .main-content-list {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+        }
+
+        .interest-item h3 {
+            font-family: var(--font-serif);
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .interest-item p {
+            font-size: 1.2rem;
+            max-width: 600px;
+        }
+
+        @media (max-width: 900px) {
+            .split-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .side-text {
+                position: static;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <ul class="menu bar">
+            <li><a href="../">Home</a></li>
+            <li><a href="../projects/">Projects</a></li>
+            <li><a href="./">Extracurriculars</a></li>
+        </ul>
+    </div>
+</nav>
+
+<main class="container reveal">
+    <header>
+        <h1 class="reveal">Beyond Code</h1>
+        <p class="hero-tagline">Exploring the world through different lenses.</p>
+    </header>
+
+    <div class="split-section">
+        <div class="side-text reveal">
+            <div class="highlight-box">
+                <p>While my professional life is rooted in technology, my personal pursuits provide the balance and inspiration that fuel my creativity.</p>
+            </div>
+        </div>
+
+        <div class="main-content-list">
+            <div class="interest-item reveal">
+                <h3>Design & Aesthetics</h3>
+                <p>I have a deep appreciation for visual communication and brand identity. I believe that even the most complex technical systems benefit from thoughtful design and clear hierarchy.</p>
+            </div>
+
+            <div class="interest-item reveal" style="animation-delay: 0.2s;">
+                <h3>Community & Mentorship</h3>
+                <p>Being part of the Luddy School community taught me the value of collaboration. I'm passionate about fostering inclusive spaces in tech where new ideas can flourish.</p>
+            </div>
+
+            <div class="interest-item reveal" style="animation-delay: 0.4s;">
+                <h3>Continuous Learning</h3>
+                <p>Whether it's diving into a new AI research paper or experimenting with a fresh design trend, the drive to learn and adapt is at the core of who I am.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Briana Flores. Designed with intent.</p>
+    </div>
+</footer>
+
+</body>
+</html>
