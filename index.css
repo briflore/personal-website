@@ -1,83 +1,179 @@
-h1 {
-    color: rgb(138, 58, 71);
-    font-size: 45px;
-    font-weight: bold;
-    text-shadow:
-        2px 2px 0 #fff,
-        4px 4px 0 #81b6ed,
-        6px 6px 0 #4447a2;
+:root {
+    --primary: rgb(138, 58, 71);    /* Deep Rose */
+    --secondary: #98a8c5;          /* Slate Blue */
+    --accent: #9CB071;            /* Iguana Green */
+    --background: #fdfdfc;         /* Off-white Cream */
+    --surface: bisque;             /* Warm Cream */
+    --text-main: #2c2c2c;
+    --text-muted: #555;
+    --font-serif: "Playfair Display", "Georgia", serif;
+    --font-sans: "Inter", "Helvetica Neue", "Arial", sans-serif;
+    --transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    background-color: #98a8c5;
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    background-color: var(--background);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
-/*color is called iguana green or was [#9CB07]*/
 
+/* Base Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reveal {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Header & Nav */
 header {
-    text-align: center;
+    padding: 60px 0;
+    text-align: left;
 }
 
-html {
-    margin: 0 15%;
+h1 {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 10vw, 6rem);
+    color: var(--primary);
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+    margin-bottom: 20px;
 }
 
 nav {
-    background-color: bisque;
-    font-style: italic;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
-
+    position: sticky;
+    top: 0;
+    background: rgba(253, 253, 252, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center; /* centers the menu items */
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-end;
 }
 
-/* Each menu item */
-nav li {
-  margin: 0 20px;
-}
-
-/* Style the links */
 nav a {
-  color: black;
-  text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    transition: var(--transition);
 }
 
-/* Hover effect */
 nav a:hover {
-  color: #ff9800;
+    color: var(--primary);
+    padding-left: 5px;
 }
 
-@media (max-width: 600px) { /* the @media is used to modify to different screen sizes, essentially creating a responsiveness to the device*/
-  nav ul {
-    flex-direction: column;
+/* Hero Section */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
     align-items: center;
-  }
-
-  nav li {
-    margin: 10px 0;
-  }
+    margin-bottom: 120px;
 }
 
-
-body {
-    margin: 0;
-    
+.hero-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
 }
 
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 1.2s ease;
+}
+
+.hero-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.hero-content {
+    padding-right: 40px;
+}
+
+.hero-tagline {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--secondary);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+/* Typography & Content */
 p {
-    background-color: bisque;
-
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-muted);
 }
 
-div {
-    background-color: bisque;
+.highlight-box {
+    background-color: var(--surface);
+    padding: 40px;
+    border-radius: 2px;
+    border-left: 4px solid var(--primary);
+    margin: 40px 0;
+}
+
+/* Footer */
+footer {
+    padding: 80px 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    margin-top: 120px;
+    text-align: center;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+    .hero-content {
+        order: 2;
+        padding-right: 0;
+    }
+    .hero-image-wrapper {
+        order: 1;
+    }
+    nav ul {
+        justify-content: center;
+    }
 }
